@@ -10,15 +10,26 @@ USE employees_db;
 
 -- Creates the table "department" within employees_db --
 CREATE TABLE department (
-
+    id INT NOT NULL AUTO_INCREMENT, -- Creates numeric column that automatically increments its default value when creating new rows --
+    name VARCHAR(30) NOT NULL, -- Makes a string column called "name" which cannot contain null --
 );
 
 -- Creates the table "role" within employees_db --
 CREATE TABLE role (
-
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(30) NOT NULL,
+    salary DECIMAL NOT NULL,
+    FOREIGN KEY (department_id)
+    REFERENCES department(id)
+    ON DELETE SET NULL
 );
 
 -- Creates the table "employee" within employees_db --
 CREATE TABLE employee (
-
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    FOREIGN KEY (role_id)
+    REFERENCES role(id)
+    ON DELETE SET NULL
 );
