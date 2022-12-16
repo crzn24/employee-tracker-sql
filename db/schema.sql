@@ -31,8 +31,8 @@ CREATE TABLE employee (
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     role_id INT,
-    manager_id INT,
+    manager_id INT, -- need to reference employee table, will have foreign key
     FOREIGN KEY (role_id)
     REFERENCES role(id)
-    ON DELETE SET NULL
+    ON DELETE SET NULL -- don't delete or set null
 );
