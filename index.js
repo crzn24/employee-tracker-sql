@@ -3,6 +3,8 @@ const inquirer = require('inquirer');
 const db = require('./db/index')
 const cTable = require('console.table');
 
+
+// Initial Function 
 function init() {
     
 }
@@ -44,6 +46,10 @@ function askQuestions() {
 function quit() {
     db.end(); 
 }
+
+
+
+init();
 
 
 
