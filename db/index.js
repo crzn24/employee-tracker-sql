@@ -1,5 +1,6 @@
+///// This is how to get mysql into JavaScript /////
+
 // Import and require mysql2 
-// This is how to get mysql into JavaScript
 const mysql = require("mysql2");
 
 // Connect to database
