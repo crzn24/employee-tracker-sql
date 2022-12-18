@@ -1,11 +1,28 @@
-# employee-tracker-sql
+# Employee Tracker SQL
+
+## Description
+This project was a challenge assigned to us where we had to create a 
+
+When you run the application in the Command-Line Interface, you are prompted with questions about 
+
+This challenge was similar to challenge 
 
 
-Inquirer.js 
-https://www.npmjs.com/package/inquirer/v/8.2.4
+## Usage
+This application . Its creation is a way to practice using the CLI, JavaScript, node, json packages, inquirer, and dependecies.
 
-console.table npm package
-https://www.npmjs.com/package/console.table
+[Link to Repository]()
 
-Node MySQL 2
-https://www.npmjs.com/package/mysql2#installation
+[Walkthrough Video Demo]()
+
+![Screenshot of ]()
+![Screenshot of ]()
+![Screenshot of ]()
+
+## Credits
+* [Inquirer.js](https://www.npmjs.com/package/inquirer/v/8.2.4)
+* [console.table npm package](https://www.npmjs.com/package/console.table)
+* [Node MySQL 2](https://www.npmjs.com/package/mysql2#installation)
+
+
+## License
