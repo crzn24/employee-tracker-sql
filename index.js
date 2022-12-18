@@ -6,7 +6,7 @@ function init() {
 
 }
 
-function askQuestions {
+function askQuestions() {
     inquirer.prompt([
         {
             type: "list",
