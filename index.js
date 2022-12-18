@@ -1,6 +1,7 @@
 // Dependencies
 const inquirer = require('inquirer');
 const db = require('./db/index')
+const cTable = require('console.table');
 
 function init() {
     
