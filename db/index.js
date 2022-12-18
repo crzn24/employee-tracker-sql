@@ -21,4 +21,4 @@ db.query("SELECT * FROM employees", function (err, results) {
 /////// this is an asynchronus function because query could take different time to complete. the function part is a callback handler
 //// need to close sql connection
 
-module.exports = db;
+module.exports = db; // check if export necessary
