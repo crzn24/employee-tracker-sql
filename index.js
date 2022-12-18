@@ -24,6 +24,26 @@ function init() {
     ]);
 }
 
+// Some way to call function when a choice is selected by user
+
+// Function to View All Employees
+// Function to Add Employee
+// Function to Update Employee Role
+// Function to View All Roles
+// Function to Add Role
+// Function to View All Departments
+// Function to Add Department
+
+
+
+// Quit the app and close connection    
+function quit() {
+    db.end(); 
+}
+
+
+
+
 
 //////////////// Challenge 10 employee tracker homework reference  ///////////
 // // Dependencies
