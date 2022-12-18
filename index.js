@@ -6,7 +6,7 @@ const cTable = require('console.table');
 
 // Initial Function 
 function init() {
-    
+    askQuestions();
 }
 
 // Function to ask questions
