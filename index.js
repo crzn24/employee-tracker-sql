@@ -1,6 +1,7 @@
 // Dependencies
 const inquirer = require('inquirer');
-const db = require('./db/')
+const db = require('./db/db');
+const connect = require('./db/sqlconnect');
 const cTable = require('console.table');
 
 
@@ -27,7 +28,15 @@ function askQuestions() {
                 "Quit"
             ]
         }
-    ]);
+    ]).then(res => {
+        let choice = res.choice;
+        // call function based on user selected choice in command line
+        switch(choice) {
+            case ("View All Employees"):
+                findAllEmployees();
+                break;
+        }
+    })
 }
 
 // Some way to call function when a choice is selected by user
