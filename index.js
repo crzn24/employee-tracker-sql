@@ -32,13 +32,25 @@ function askQuestions() {
 
 // Some way to call function when a choice is selected by user
 
+
+
+
+
+
 // Function to View All Employees
+
 // Function to Add Employee
+
 // Function to Update Employee Role
+
 // Function to View All Roles
+
 // Function to Add Role
+
 // Function to View All Departments
+
 // Function to Add Department
+
 
 
 
