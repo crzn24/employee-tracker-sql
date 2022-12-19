@@ -1,6 +1,6 @@
 // Dependencies
 const inquirer = require('inquirer');
-const db = require('./db/index')
+const db = require('./db/sqlconnect')
 const cTable = require('console.table');
 
 
