@@ -250,13 +250,6 @@ function addNewDepartment() {
         .then(() => askQuestions())
     })
 
-
-    db.addDepartment()
-    .then(([rows]) => {
-        let departments = rows;
-        console.log("\n"); // 
-        console.table(departments);
-    }).then(() => askQuestions());
 } //input, ask user for name, name: "name"
 
 
