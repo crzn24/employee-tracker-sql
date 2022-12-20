@@ -32,3 +32,5 @@ class dbEmployees {
 
   // Make sure to use .promise() on each connection inside each method
 }
+
+module.exports = db;
