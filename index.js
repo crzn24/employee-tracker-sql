@@ -50,10 +50,7 @@ function askQuestions() {
     })
 }
 
-// Some way to call function when a choice is selected by user
-
-
-
+// Way to call function when a choice is selected by user
 
 
 
@@ -62,26 +59,29 @@ function viewAllEmployees() {
     db.findAllEmployees()
     .then(([rows]) => {
         let employees = rows;
-        console.log("\n"); // 
+        console.log("\n"); // Adds space between prompt and table in command line 
         console.table(employees);
     }).then(() => askQuestions());
 } 
 
 // Function to Add Employee
 
+
 // Function to Update Employee Role
+
 
 // Function to View All Roles
 function viewAllRoles() {
     db.findAllRoles()
     .then(([rows]) => {
         let roles = rows;
-        console.log("\n"); // 
+        console.log("\n"); 
         console.table(roles);
     }).then(() => askQuestions());
 }
 
 // Function to Add Role
+
 
 // Function to View All Departments
 
