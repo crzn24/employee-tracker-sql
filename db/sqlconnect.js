@@ -5,7 +5,7 @@ const mysql = require("mysql2");
 
 // Connect to database
 ////// this takes place of opening mysql so you don't have to put it in the CLI
-const db = mysql.createConnection(
+const connection = mysql.createConnection(
   {
     host: "localhost", // MySQL username,
     user: "root", // MySQL password
@@ -16,11 +16,11 @@ const db = mysql.createConnection(
 );
 
 // Query database
-db.query("SELECT * FROM employees", function (err, results) {
+connection.query("SELECT * FROM employees", function (err, results) {
   console.log(results);
 //   db.end(); // added this to close connection (for homework, don't end here, only close after inquirer questions)
 });
 /////// this is an asynchronus function because query could take different time to complete. the function part is a callback handler
 //// need to close sql connection
 
-module.exports = db; // check if export necessary
+module.exports = connection; // check if export necessary
