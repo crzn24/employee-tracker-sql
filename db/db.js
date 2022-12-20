@@ -17,13 +17,18 @@ class EmployeesDB {
   }
 
   // method to add employee
-  addEmployee() {
-    return 
+  addEmployee(employee) {
+    return this.connection.promise().query(
+        "INSERT INTO employee SET ?", employee
+    ); 
   }
 
   // method to update employee role
-  updateEmployeeRole() {
-
+  updateEmployeeRole(roleId, employeeId) {
+    return this.connection.promise().query(
+        "UPDATE employee SET role_id = ? WHERE id = ?",
+        [roleId, employeeId]
+    );
   }
 
   // method to show all roles
@@ -34,8 +39,10 @@ class EmployeesDB {
   }
 
   // method to add role
-  addRole() {
-
+  addRole(role) {
+    return this.connection.promise().query(
+        "INSERT INTO role SET ?", role
+    );
   }
 
   // method to show all departments
@@ -46,14 +53,14 @@ class EmployeesDB {
   }
 
   // method to add department
-  addDepartment(data) {
+  addDepartment(department) {
      return this.connection.promise().query(
-        "INSERT INTO department SET ?", {name: data.name}
+        "INSERT INTO department SET ?", department
     );
-  }
+  } // could pass in data into addDepartment, then in string instead of department do {name: data.name}
 
 
-  // Make sure to use .promise() on each connection inside each method
+  ////////// Make sure to use .promise() on each connection inside each method //////////
 }
 
 module.exports = new EmployeesDB(connection);
