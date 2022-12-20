@@ -44,9 +44,9 @@ function askQuestions() {
             case ("View All Roles"):
                 viewAllRoles();
                 break;
-            // case (""):
-            //     ();
-            //     break;
+            case ("Add Role"):
+                addNewRole();
+                break;
             case ("View All Departments"):
                 viewAllDepartments();
                 break; 
@@ -134,13 +134,8 @@ function addNewEmployee() {
                 })
             })
         })
-    });
-
-
-    
-    
-    // addEmployee
-}
+    })
+};
 
 // Function to Update Employee Role
 
@@ -156,7 +151,11 @@ function viewAllRoles() {
 }
 
 // Function to Add Role
+function addNewRole() {
 
+
+
+}
 
 // Function to View All Departments
 function viewAllDepartments() {
