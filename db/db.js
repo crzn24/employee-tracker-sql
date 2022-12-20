@@ -17,17 +17,34 @@ class EmployeesDB {
   }
 
   // method to add employee
+  addEmployee() {
+
+  }
 
   // method to update employee role
+  updateEmployeeRole() {
+
+  }
 
   // method to show all roles
+  findAllRoles() {
+
+  }
 
   // method to add role
+  addRole() {
+
+  }
 
   // method to show all departments
+  findAllDepartments() {
+
+  }
 
   // method to add department
-
+  addDepartment() {
+    
+  }
 
 
   // Make sure to use .promise() on each connection inside each method
