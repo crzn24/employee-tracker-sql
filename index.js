@@ -152,8 +152,36 @@ function viewAllRoles() {
 
 // Function to Add Role
 function addNewRole() {
+    db.findAllDepartments()
+    .then(([rows]) => {
+        let departments = rows;
+        const departmentChoices = departments.map(({id, name}) =>({
+            name: name,
+            value: id
+        }))
+        
+        inquirer.prompt([
+            {
+                name: "title",
+                message: "What is the name of the role?"
+            },
+            {
+                name: "salary",
+                message: "What is the salary of the role?"
+            },
+            {
+                type: "list",
+                name: "department_id",
+                message: "Which department does the role belong to?",
+                choices: departmentChoices
+            }
+        ]) .then(role => {
+                db.addRole(role)
+                .then(() => console.log(`Added ${role.title} to the database`))
+                .then(() => askQuestions())
+        })
 
-
+    })
 
 }
 
