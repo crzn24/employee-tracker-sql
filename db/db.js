@@ -18,7 +18,7 @@ class EmployeesDB {
 
   // method to add employee
   addEmployee() {
-
+    return 
   }
 
   // method to update employee role
@@ -28,7 +28,9 @@ class EmployeesDB {
 
   // method to show all roles
   findAllRoles() {
-
+    return this.connection.promise().query(
+        "SELECT * FROM role;"
+    );
   }
 
   // method to add role
@@ -38,12 +40,16 @@ class EmployeesDB {
 
   // method to show all departments
   findAllDepartments() {
-
+    return this.connection.promise().query(
+        "SELECT * FROM department;"
+    );
   }
 
   // method to add department
-  addDepartment() {
-    
+  addDepartment(data) {
+     return this.connection.promise().query(
+        "INSERT INTO department SET ?", {name: data.name}
+    );
   }
 
 
