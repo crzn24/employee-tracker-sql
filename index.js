@@ -238,7 +238,19 @@ function viewAllDepartments() {
 
 // Function to Add Department
 function addNewDepartment() {
-    // inquirer.prompt
+    inquirer.prompt([
+        {
+            name: "name",
+            message: "What is the name of the department?"
+        }
+    ]) .then(res => {
+        let name = res;
+        db.addDepartment(name)
+        .then(() => console.log(`Added ${name.name} to the database`))
+        .then(() => askQuestions())
+    })
+
+
     db.addDepartment()
     .then(([rows]) => {
         let departments = rows;
