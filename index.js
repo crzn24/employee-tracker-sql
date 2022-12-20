@@ -44,6 +44,9 @@ function askQuestions() {
             case ("Add Department"):
                 addNewDepartment();
                 break;
+            case ("View All Departments"):
+                viewAllDepartments();
+                break;
             default:
                 quit();
         }
@@ -84,7 +87,14 @@ function viewAllRoles() {
 
 
 // Function to View All Departments
-
+function viewAllDepartments() {
+    db.findAllDepartments()
+    .then(([rows]) => {
+        let departments = rows;
+        console.log("\n"); 
+        console.table(departments);
+    }).then(() => askQuestions());
+}
 
 // Function to Add Department
 function addNewDepartment() {
