@@ -34,6 +34,8 @@ function askQuestions() {
             case ("View All Employees"):
                 viewAllEmployees();
                 break;
+            default:
+                quit();
         }
     })
 }
@@ -71,7 +73,8 @@ function viewAllEmployees() {
 
 // Quit the app and close connection    
 function quit() {
-    db.end(); 
+    // db.end(); 
+    process.exit();
 }
 
 
