@@ -19,7 +19,7 @@ This application allows users to view and manage the departments, roles, and emp
 
 [Link to Repository](https://github.com/crzn24/employee-tracker-sql.git)
 
-[Walkthrough Video Demo]()
+[Walkthrough Video Demo](https://drive.google.com/drive/folders/1lM9GLm6A42mU_s9NVhnqMBXfOdo2qnz0?usp=sharing)
 
 ![Screenshot of initial prompts](./assets/images/employeetrackerinit.png)
 ![Screenshot of tables](./assets/images/employeetrackertables.png)
