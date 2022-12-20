@@ -1,8 +1,7 @@
 // Dependencies
 const inquirer = require('inquirer');
 const db = require('./db/db');
-const connection = require('./db/sqlconnect');
-const cTable = require('console.table');
+require('console.table');
 
 
 // Initial Function 
@@ -52,7 +51,7 @@ function viewAllEmployees() {
     .then(([rows]) => {
         let employees = rows;
         console.log("\n");
-        cTable(employees);
+        console.table(employees);
     }).then(() => askQuestions());
 } 
 // Function to Add Employee
