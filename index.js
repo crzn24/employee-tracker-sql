@@ -1,7 +1,7 @@
 // Dependencies
 const inquirer = require('inquirer');
 const db = require('./db/db');
-const connect = require('./db/sqlconnect');
+const connection = require('./db/sqlconnect');
 const cTable = require('console.table');
 
 
@@ -33,7 +33,7 @@ function askQuestions() {
         // call function based on user selected choice in command line
         switch(choice) {
             case ("View All Employees"):
-                findAllEmployees();
+                viewAllEmployees();
                 break;
         }
     })
@@ -47,7 +47,14 @@ function askQuestions() {
 
 
 // Function to View All Employees
-
+function viewAllEmployees() {
+    db.findAllEmployees()
+    .then(([rows]) => {
+        let employees = rows;
+        console.log("\n");
+        cTable(employees);
+    }).then(() => askQuestions());
+} 
 // Function to Add Employee
 
 // Function to Update Employee Role
