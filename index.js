@@ -34,6 +34,8 @@ function askQuestions() {
             case ("View All Employees"):
                 viewAllEmployees();
                 break;
+            case ("Add Employee"):
+                
             default:
                 quit();
         }
