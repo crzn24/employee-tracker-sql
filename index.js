@@ -1,5 +1,6 @@
 // Dependencies
 const inquirer = require('inquirer');
+const { addEmployee } = require('./db/db');
 const db = require('./db/db');
 require('console.table');
 
@@ -35,7 +36,14 @@ function askQuestions() {
                 viewAllEmployees();
                 break;
             case ("Add Employee"):
-                
+                addEmployee();
+                break;
+            case ("View All Roles"):
+                viewAllRoles();
+                break;
+            case ("Add Department"):
+                addNewDepartment();
+                break;
             default:
                 quit();
         }
@@ -54,22 +62,40 @@ function viewAllEmployees() {
     db.findAllEmployees()
     .then(([rows]) => {
         let employees = rows;
-        console.log("\n");
+        console.log("\n"); // 
         console.table(employees);
     }).then(() => askQuestions());
 } 
+
 // Function to Add Employee
 
 // Function to Update Employee Role
 
 // Function to View All Roles
+function viewAllRoles() {
+    db.findAllRoles()
+    .then(([rows]) => {
+        let roles = rows;
+        console.log("\n"); // 
+        console.table(roles);
+    }).then(() => askQuestions());
+}
 
 // Function to Add Role
 
 // Function to View All Departments
 
-// Function to Add Department
 
+// Function to Add Department
+function addNewDepartment() {
+    // inquirer.prompt
+    db.addDepartment()
+    .then(([rows]) => {
+        let departments = rows;
+        console.log("\n"); // 
+        console.table(departments);
+    }).then(() => askQuestions());
+} //input, ask user for name, name: "name"
 
 
 
